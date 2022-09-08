@@ -13,6 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 app.use('/api/goals', require('./routes/goalRoutes')) // app.use() is for running middleware, which are functions run between the request and response
+app.use('/api/users', require('./routes/userRoutes'))
 app.use(errorHandler)
 
 app.listen(port, ()=>{
